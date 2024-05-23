@@ -1,0 +1,28 @@
+{
+  "name": "react-native-prototype2",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "react-native-prototype2",
+
+  "workspaceFolder": "/react-native-prototype2",
+
+  // "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "Gruntfuggly.todo-tree"],
+        
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.addMissingImports": true,
+          "source.fixAll": true
+        }
+      }
+    }
+  }
+}

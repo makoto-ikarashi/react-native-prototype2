@@ -1,0 +1,21 @@
+version: "3"
+
+volumes:
+  react-native-prototype2_node_modules:
+    driver: local
+
+services:
+  react-native-prototype2:
+    container_name: react-native-prototype2
+    build:
+      context: .
+    tty: true
+    network_mode: host
+    volumes:
+      - ../.:/react-native-prototype2
+      - react-native-prototype2_node_modules:/react-native-prototype2/node_modules
+    #   - $HOME/.Xauthority:/home/node/.Xauthority:rw #X11フォワーディングのために必要
+    # environment:
+    #   - DISPLAY=localhost:10.0 #X11フォワーディングのために必要
+    # devices:
+    #   - /dev/kvm:/dev/kvm
